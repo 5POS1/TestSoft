@@ -5,6 +5,9 @@
  */
 package com.mycompany.mavenproject2;
 
+import java.util.Random;
+import java.util.Scanner;
+
 /**
  *
  * @author Student
@@ -37,18 +40,31 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel7 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jLabel5 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jPanel9 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jButton8 = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -68,50 +84,102 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel1.setText("<html>В заданном массиве поменять местами наибольший и наименьший элементы.</html>");
 
         jButton1.setText("Выполнить ");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addGap(45, 45, 45)
                 .addComponent(jButton1)
-                .addContainerGap())
+                .addContainerGap(993, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addGap(0, 490, Short.MAX_VALUE))
+                .addContainerGap(479, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("№10", jPanel4);
+
+        jLabel2.setText("<html>Заполнить массив А[1..8] числами, вводимыми с клавиатуры.<br> Найти среднее арифметическое элементов с четными индексами.</html>");
+
+        jButton2.setText("Выполнить");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(186, 186, 186)
+                .addComponent(jButton2)
+                .addContainerGap(975, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 513, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton2)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(474, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("№35", jPanel5);
+
+        jLabel4.setText("<html>В одномерном массиве хранится информация о отчислениях на развитие предприятия за каждый месяц года.<br> Определить: а) общую сумму отчислений; б) номера месяцев, когда отчислений не было;<br> в) номера месяцев, когда сумма отчислений была максимальной.</html>");
+
+        jButton3.setText("Выполнить");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(551, 551, 551)
+                        .addComponent(jButton3)))
+                .addContainerGap(956, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 513, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3)
+                .addContainerGap(431, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("№60", jPanel6);
@@ -131,47 +199,72 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jTabbedPane3.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+        jLabel5.setText("<html>Дана квадратная матрица порядка n. Составить программу вычисления количества положительных элементов <br>в нижнем левом треугольнике, включая диагональные элементы.</html>");
+
+        jButton4.setText("Выполнить");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(512, 512, 512)
+                        .addComponent(jButton4)))
+                .addContainerGap(995, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jButton4)
+                .addContainerGap(424, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("№10", jPanel7);
+
+        jLabel6.setText("<html>Вывести на экран матрицу 5х8.Определить номера столбцов, содержащих хотя бы один отрицательный элемент.</html>");
+
+        jButton5.setText("Выполнить");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(541, 541, 541)
+                        .addComponent(jButton5)))
+                .addContainerGap(966, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 513, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
+                .addComponent(jButton5)
+                .addContainerGap(416, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("№35", jPanel8);
@@ -191,41 +284,107 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jTabbedPane4.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
+        jLabel7.setText("<html>В заданном наборе слов найти слово максимальной длины.</html>");
+
+        jButton6.setText("Выполнить");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(494, 494, 494)
+                        .addComponent(jButton6)))
+                .addContainerGap(1013, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 513, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jButton6)
+                .addContainerGap(439, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("№10", jPanel9);
+
+        jLabel8.setText("<html>Определить, четна ли сумма цифр, занимающих во введенном числе нечетные позиции.</html>");
+
+        jButton7.setText("Выполнить");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(494, 494, 494)
+                        .addComponent(jButton7)))
+                .addContainerGap(1013, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 513, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(jButton7)
+                .addContainerGap(433, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("№35", jPanel10);
+
+        jLabel9.setText("<html>Создать процедуру, позволяющую записывать введенное слово в зеркальном отображении.</html>");
+
+        jButton8.setText("Выполнить");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(534, 534, 534)
+                        .addComponent(jButton8)))
+                .addContainerGap(973, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 513, Short.MAX_VALUE)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jButton8)
+                .addContainerGap(435, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("№60", jPanel11);
@@ -278,6 +437,264 @@ public class NewJFrame extends javax.swing.JFrame {
     System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.out.println("В заданном массиве поменять местами наибольший и наименьший\n"
+                + "элементы.");
+        Scanner s = new Scanner(System.in);
+        int[] array = new int[10];
+
+        System.out.println("Введите начало диапазона:");
+        int a = s.nextInt();
+        System.out.println("Введите конец диапазона:");
+        int b = s.nextInt();
+
+        // Генерация массива 
+        for (int i = 0; i < 10; i++) {
+            array[i] = (int) (Math.random() * (b - a + 1)) + a;
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+
+        int minIndex = 0;
+        int maxIndex = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < array[minIndex]) {
+                minIndex = i;
+            }
+            if (array[i] > array[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+
+        System.out.println("Min = " + array[minIndex]);
+        System.out.println("Max = " + array[maxIndex]);
+
+        int temp = array[minIndex];
+        array[minIndex] = array[maxIndex];
+        array[maxIndex] = temp;
+
+        System.out.println("Измененный массив:");
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+        System.out.print(" ");
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        System.out.println("Заполнить массив А[1..8] случайными числами. Найти среднее\n"
+                + "арифметическое элементов с четными индексами.");
+        int[] array = new int[8];
+        Random random = new Random();
+
+        System.out.println("Сгенерированный массив:");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(100); // Генерируем случайные числа от 0 до 99
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+
+        double sum = 0;
+        int count = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 == 0) {
+                sum += array[i];
+                count++;
+            }
+        }
+
+        double average = (count > 0) ? sum / count : 0; // Обработка случая пустого массива, чтобы избежать деления на 0
+
+        System.out.println("Среднее арифметическое элементов с четными индексами: " + average);
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        System.out.println("В одномерном массиве хранится информация о отчислениях на развитие\n"
+                + "предприятия за каждый месяц года. Определить: а) общую сумму отчислений; б)\n"
+                + "номера месяцев, когда отчислений не было; в) номера месяцев, когда сумма\n"
+                + "отчислений была максимальной.");
+        double[] deductions = new double[12];
+        Random random = new Random();
+
+        System.out.println("Отчисления за каждый месяц (сгенерировано рандомно): ");
+        for (int i = 0; i < deductions.length; i++) {
+            deductions[i] = random.nextDouble() * 1000; // случайное значение от 0 до 1000
+            System.out.printf("Месяц %d: %.2f%n", (i + 1), deductions[i]);
+        }
+
+        double totalDeductions = 0;
+        for (double deduction : deductions) {
+            totalDeductions += deduction;
+        }
+
+        System.out.printf("Общая сумма отчислений: %.2f%n", totalDeductions);
+
+        //B
+        System.out.print("Месяцы, когда отчислений не было: ");
+        boolean hasNoDeductions = true;
+        for (int i = 0; i < deductions.length; i++) {
+            if (deductions[i] == 0) {
+                System.out.print((i + 1) + " "); //1-12 месяц
+                hasNoDeductions = false;
+            }
+        }
+        if (hasNoDeductions && !containsZero(deductions)) {
+            System.out.print("Нет");
+        }
+        System.out.println();
+
+        //С
+        double maxDeduction = deductions[0];
+        for (double deduction : deductions) {
+            if (deduction > maxDeduction) {
+                maxDeduction = deduction;
+            }
+        }
+
+        System.out.print("Месяцы с максимальными отчислениями: ");
+        for (int i = 0; i < deductions.length; i++) {
+            if (deductions[i] == maxDeduction) {
+                System.out.print((i + 1) + " "); //1-12 месяц
+            }
+        }
+        System.out.println(); // Добавлено для корректного форматирования вывода
+    }
+
+    private static boolean containsZero(double[] arr) {
+        for (double value : arr) {
+            if (value == 0) {
+                return true;
+            }
+        }
+        return false;
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        System.out.println("Дана квадратная матрица порядка n. Составить программу вычисления\n"
+                + "количества положительных элементов в нижнем левом треугольнике, включая\n"
+                + "диагональные элементы.");
+        int n = 5; //Размер матрицы
+        int[][] matrix = createSquareMatrix(n, -10, 10); //Создаем матрицу
+
+        //Выводим матрицу 
+        System.out.println("Сгенерированная матрица:");
+        printMatrix(matrix);
+
+        int positiveCount = countPositiveElementsInLowerLeftTriangle(matrix);
+        System.out.println("Количество положительных элементов треугольнике: " + positiveCount);
+    }
+
+    public static int[][] createSquareMatrix(int n, int minValue, int maxValue) {
+        if (n <= 0) {
+            return new int[0][0];
+        }
+
+        int[][] matrix = new int[n][n];
+        Random random = new Random();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix[i][j] = random.nextInt(maxValue - minValue + 1) + minValue;
+            }
+        }
+        return matrix;
+    }
+
+    public static int countPositiveElementsInLowerLeftTriangle(int[][] matrix) {
+        int n = matrix.length;
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) { //Для нижнего левого треугольника
+                if (matrix[i][j] > 0) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    /*
+     Выводит матрицу в консоль.
+     */
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            for (int element : row) {
+                System.out.print(element + " ");
+            }
+            System.out.println();
+        }
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введите слова через пробел:");
+        String input = scanner.nextLine();
+
+        String[] words = input.split("\\s+");
+
+        if (words.length == 0) {
+            System.out.println("Нет слов для обработки.");
+            return;
+        }
+
+        String longestWord = words[0];
+
+        for (int i = 1; i < words.length; i++) {
+            String currentWord = words[i];
+            int currentLength = currentWord.length();
+            int maxLength = 0;
+
+            if (currentLength > maxLength) {
+                longestWord = currentWord;
+                maxLength = currentLength;
+            }
+        }
+
+        System.out.println("Самое длинное слово: " + longestWord);
+    
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите целое число: ");
+        String number = scanner.nextLine();
+
+        int sumOfOddPositionDigits = 0;
+
+        for (int i = 0; i < number.length(); i++) {
+
+            if (i % 2 == 0) {
+
+                int digit = Character.getNumericValue(number.charAt(i));
+                sumOfOddPositionDigits += digit;
+            }
+        }
+
+        if (sumOfOddPositionDigits % 2 == 0) {
+            System.out.println("Сумма цифр, стоящих на нечетных позициях, четная.");
+        } else {
+            System.out.println("Сумма цифр, стоящих на нечетных позициях, нечетная.");
+        }
+
+        scanner.close();
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -315,7 +732,22 @@ public class NewJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -334,11 +766,9 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
