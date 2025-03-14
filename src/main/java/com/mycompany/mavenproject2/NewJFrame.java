@@ -14,6 +14,10 @@ import java.util.Scanner;
  */
 public class NewJFrame extends javax.swing.JFrame {
 
+    private static void reverseAndPrintWord() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * Creates new form NewJFrame
      */
@@ -39,6 +43,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -90,15 +96,24 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel10.setText("Вывод");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(jButton1)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
+                        .addComponent(jButton1))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(jLabel10)
+                        .addGap(53, 53, 53)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(993, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -108,7 +123,11 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addContainerGap(479, Short.MAX_VALUE))
+                .addGap(87, 87, 87)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
+                .addContainerGap(372, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("№10", jPanel4);
@@ -438,6 +457,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
         System.out.println("В заданном массиве поменять местами наибольший и наименьший\n"
                 + "элементы.");
         Scanner s = new Scanner(System.in);
@@ -630,7 +650,46 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+          System.out.println("Вывести на экран матрицу 5х8. Определить номера столбцов,\n"
+                + "содержащих хотя бы один отрицательный элемент.");
+        int rows = 5;
+        int cols = 8;
+
+        //Создаем матрицу 5x8
+        int[][] matrix = new int[rows][cols];
+
+        //Заполняем матрицу случайными числами 
+        java.util.Random random = new java.util.Random();
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                matrix[i][j] = random.nextInt(21) - 10; //Случайные числа 
+            }
+        }
+
+        //Выводим матрицу
+        System.out.println("Матрица:");
+        printMatrix(matrix);
+
+        //Находим и выводим номера столбцов, содержащих отрицательные 
+        System.out.println("\nСтолбцы, содержащие хотя бы один отрицательный элемент:");
+        findNegativeColumns(matrix);
+    }
+    //Поиск и вывод номеров столбцов содержащих отрицательные элементы
+    public static void findNegativeColumns(int[][] matrix) {
+        for (int j = 0; j < matrix[0].length; j++) {
+            boolean hasNegative = false;
+            for (int i = 0; i < matrix.length; i++) {
+                if (matrix[i][j] < 0) {
+                    hasNegative = true;
+
+                }
+            }
+            if (hasNegative) {
+                System.out.print((j + 1) + " "); // Выводим номер столбца 
+            }
+        }
+        System.out.println();
+    
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -692,13 +751,33 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+            Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите слово: ");
+        String word = scanner.nextLine();
+
+        if (word == null || word.isEmpty()) {
+            System.out.println("Вы не ввели слово.");
+            scanner.close();
+            return;
+        }
+
+        String reversedWord = new StringBuilder(word).reverse().toString();
+
+        System.out.println("Слово в зеркальном отображении: " + reversedWord);
+
+        scanner.close();
+    }
+
+    public static void main(String[] args) {
+        reverseAndPrintWord();
+    
     }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+     static {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -740,6 +819,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -770,5 +850,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
