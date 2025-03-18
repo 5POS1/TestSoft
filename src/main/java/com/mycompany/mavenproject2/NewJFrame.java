@@ -5,6 +5,7 @@
  */
 package com.mycompany.mavenproject2;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -45,6 +46,11 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -104,7 +110,31 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
         jLabel10.setText("Вывод");
+
+        jLabel15.setText("Начало диопазона ");
+
+        jLabel16.setText("Конец диопозона");
+
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+
+        jTextField8.setText("jTextField8");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -119,10 +149,17 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addComponent(jButton1))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addComponent(jLabel10)
-                        .addGap(53, 53, 53)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(993, Short.MAX_VALUE))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel10))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField1)
+                            .addComponent(jTextField6)
+                            .addComponent(jTextField7)
+                            .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE))))
+                .addContainerGap(963, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,11 +168,21 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addGap(87, 87, 87)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10))
-                .addContainerGap(372, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(301, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("№10", jPanel4);
@@ -513,46 +560,50 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        
-        System.out.println("В заданном массиве поменять местами наибольший и наименьший\n"
-                + "элементы.");
-        Scanner s = new Scanner(System.in);
-        int[] array = new int[10];
+        int arraySize = 10; // Размер массива
+        int minValue = 1;    // Минимальное значение для рандома
+        int maxValue = 15;  // Максимальное значение для рандома
 
-        System.out.println("Введите начало диапазона:");
-        int a = s.nextInt();
-        System.out.println("Введите конец диапазона:");
-        int b = s.nextInt();
+        int[] arr = generateRandomArray(arraySize, minValue, maxValue);
+        System.out.println("Исходный массив: " + Arrays.toString(arr));
 
-        // Генерация массива 
-        for (int i = 0; i < 10; i++) {
-            array[i] = (int) (Math.random() * (b - a + 1)) + a;
-            System.out.print(array[i] + " ");
+        swapMinMax(arr);
+
+        System.out.println("Измененный массив: " + Arrays.toString(arr));
+    }
+
+    public static int[] generateRandomArray(int size, int min, int max) {
+        int[] arr = new int[size];
+        Random random = new Random();
+        for (int i = 0; i < size; i++) {
+            arr[i] = random.nextInt(max - min + 1) + min; // Генерация случайного числа в диапазоне [min, max]
         }
-        System.out.println();
+        return arr;
+    }
+
+    public static void swapMinMax(int[] arr) {
+        if (arr == null || arr.length <= 1) {
+            return; // Нечего делать, если массив пустой или содержит только один элемент
+        }
 
         int minIndex = 0;
         int maxIndex = 0;
-        for (int i = 1; i < array.length; i++) {
-            if (array[i] < array[minIndex]) {
+
+        // Находим индексы минимального и максимального элементов
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[minIndex]) {
                 minIndex = i;
             }
-            if (array[i] > array[maxIndex]) {
+            if (arr[i] > arr[maxIndex]) {
                 maxIndex = i;
             }
         }
 
-        System.out.println("Min = " + array[minIndex]);
-        System.out.println("Max = " + array[maxIndex]);
-
-        int temp = array[minIndex];
-        array[minIndex] = array[maxIndex];
-        array[maxIndex] = temp;
-
-        System.out.println("Измененный массив:");
-        for (int i : array) {
-            System.out.print(i + " ");
-        }
-        System.out.print(" ");
+        // Меняем местами элементы по найденным индексам
+        int temp = arr[minIndex];
+        arr[minIndex] = arr[maxIndex];
+        arr[maxIndex] = temp;
+    
             // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -829,6 +880,18 @@ public class NewJFrame extends javax.swing.JFrame {
     
     }//GEN-LAST:event_jButton8ActionPerformed
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -879,6 +942,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -914,5 +979,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }
